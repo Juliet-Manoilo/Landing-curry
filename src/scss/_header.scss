@@ -1,0 +1,78 @@
+.header {
+  min-height: 100vh;
+  background-image: url("../img/bgc.png");
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: auto 110%;
+  padding: 3% 5% 0 5%;
+  &__nav-panel {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav-list {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    font-size: $link;
+    color: $blue;
+    font-weight: 400;
+  }
+  &__logo {
+    font-weight: 900;
+    font-size: $logo-size;
+    color: $logo;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    &:hover {
+      border-bottom: 1px solid $logo;
+    }
+  }
+  &__nav-link:hover {
+    font-weight: 500;
+  }
+  &__content {
+    background-color: transparent;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+  }
+  &__title {
+    font-size: $title;
+    margin-bottom: 20px;
+    color: $title-color;
+  }
+  &__text {
+    background-color: transparent;
+    color: $blue;
+    font-size: $text;
+    margin-bottom: 25px;
+    &:nth-child(3) {
+      margin-bottom: 50px;
+    }
+  }
+  &__btn {
+    width: 189px;
+    height: 36px;
+    font-size: $btn;
+    border: 2px solid $title-color;
+    border-radius: 2px;
+    background-color: transparent;
+    margin-right: 0;
+    padding: 6px;
+    text-align: center;
+    font-weight: 500;
+    &:hover {
+      background-color: $title-color;
+      color: $white;
+    }
+  }
+  &__btn-links {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+  }
+}

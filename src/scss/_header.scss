@@ -3,8 +3,9 @@
   background-image: url("../img/bgc.png");
   background-position: 100% 0%;
   background-repeat: no-repeat;
-  background-size: auto 110%;
-  padding: 3% 5% 0 5%;
+  background-size: auto 100%;
+  padding: 3% 6% 200px 6%;
+
   &__nav-panel {
     background-color: transparent;
     display: flex;
@@ -61,18 +62,35 @@
     border: 2px solid $title-color;
     border-radius: 2px;
     background-color: transparent;
-    margin-right: 0;
+    margin-right: 10px;
     padding: 6px;
     text-align: center;
     font-weight: 500;
+    color: $title-color;
     &:hover {
       background-color: $title-color;
       color: $white;
+    }
+    &--small {
+      width: 160px;
+      height: 26px;
+      font-size: $header-btn;
+      border: 2px solid $title-color;
+      border-radius: 2px;
+      background-color: $title-color;
+      margin-right: 10px;
+      padding: 4px;
+      text-align: center;
+      font-weight: 500;
+      color: $white;
+      &:hover {
+        background-color: transparent;
+        color: $title-color;
+      }
     }
   }
   &__btn-links {
     background-color: transparent;
     display: flex;
-    flex-direction: row;
   }
 }

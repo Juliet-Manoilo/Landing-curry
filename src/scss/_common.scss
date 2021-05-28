@@ -19,3 +19,16 @@ a {
 ul {
   list-style: none;
 }
+
+i {
+  background-color: $footer-bgc;
+  color: #b0b8bc;
+}
+
+i:hover {
+  color: $title-color;
+}
+
+li {
+  background-color: transparent;
+}

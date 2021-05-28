@@ -9,11 +9,37 @@
       type="image/x-icon"
       href="assets/fav/favicon.ico"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!---HEADER START-->
     <header class="header" id="top">
+      <!--BURGER MENU START-->
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu__box">
+          <li><a href="/" class="menu__logo">Landie</a></li>
+          <li><a href="#" class="menu__nav-link">Home</a></li>
+          <li>
+            <a href="#about" class="menu__nav-link">About</a>
+          </li>
+          <li>
+            <a href="#footer" class="menu__nav-link">Contact</a>
+          </li>
+          <li><a href="#" class="menu__btn-buy">Buy Now</a></li>
+        </ul>
+      </div>
+      <!--BURGER MENU FINISH-->
       <nav class="header__nav-panel">
         <ul class="header__nav-list">
           <li><a href="#" class="header__nav-link">Home</a></li>
@@ -67,7 +93,7 @@
               class="about__icon"
               width="36"
               height="36"
-              viewBox="0 0 36 36"
+              viewbox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -90,7 +116,7 @@
               class="about__icon"
               width="36"
               height="36"
-              viewBox="0 0 36 36"
+              viewbox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -111,7 +137,7 @@
       </div>
 
       <div class="about__right-col">
-        <img src="./img/img-about.png" alt="mobile" />
+        <img class="about__img" src="./img/img-about.png" alt="mobile" />
       </div>
     </main>
     <!---MAIN END-->
@@ -137,7 +163,7 @@
               class="about-reverse__icon"
               width="36"
               height="36"
-              viewBox="0 0 36 36"
+              viewbox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -160,7 +186,7 @@
               class="about-reverse__icon"
               width="36"
               height="36"
-              viewBox="0 0 36 36"
+              viewbox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -182,7 +208,7 @@
               class="about-reverse__icon"
               width="36"
               height="36"
-              viewBox="0 0 36 36"
+              viewbox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -204,7 +230,7 @@
               class="about-reverse__icon"
               width="36"
               height="36"
-              viewBox="0 0 36 36"
+              viewbox="0 0 36 36"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -226,11 +252,39 @@
     </section>
     <!---SECTION "ABOUT-REVERSE" FINISH-->
     <!---FOOTER START-->
-    <footer class="footer">
-      <div class="footer__top-panel">
+    <footer class="footer" id="footer">
+      <div class="footer__logo-wrapper">
         <a href="#top" class="footer__logo">Landie</a>
       </div>
-      <div class="footer__bottom-panel"></div>
+      <div class="footer__top-panel">
+        <p class="footer__copyright">©2020 Yourcompany</p>
+        <a href="#" class="footer__btn">Purchase Now</a>
+      </div>
+
+      <div class="footer__bottom-panel">
+        <nav class="footer__nav-links">
+          <a href="#top" class="footer__link">Home</a
+          ><a href="#about" class="footer__link">About</a
+          ><a href="" class="footer__link">Contact</a>
+        </nav>
+        <div class="footer__social">
+          <a href="#" target="_blank" class="footer__soc-link"
+            ><i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank" class="footer__soc-link"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" target="_blank" class="footer__soc-link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" target="_blank" class="footer__soc-link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" target="_blank" class="footer__soc-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
     </footer>
     <!---FOOTER FINISH-->
     <script src="js/bundle.js"></script>

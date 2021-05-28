@@ -1,6 +1,109 @@
 .footer {
   background-color: $footer-bgc;
+  min-height: 180px;
+  padding: 1% 9%;
+  @media (max-width: 562px) {
+    padding: 3%;
+  }
+  &__logo-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: $footer-bgc;
+    @media (max-width: 562px) {
+      margin-bottom: 15px;
+    }
+  }
   &__logo {
     color: $title-color;
+
+    font-size: $logo-size;
+    font-weight: 900;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  &__top-panel {
+    background-color: $footer-bgc;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @media (max-width: 562px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+  }
+  &__copyright {
+    font-size: $link;
+    color: $light-grey;
+    background-color: $footer-bgc;
+  }
+  &__btn {
+    width: 109px;
+    height: 26px;
+    font-size: $header-btn;
+    border: 2px solid $title-color;
+    border-radius: 2px;
+    background-color: $title-color;
+    padding: 4px;
+    text-align: center;
+    font-weight: 500;
+    color: $white;
+    &:hover {
+      background-color: transparent;
+      color: $title-color;
+    }
+    @media (max-width: 562px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__bottom-panel {
+    display: flex;
+    justify-content: space-between;
+    background-color: $footer-bgc;
+    position: relative;
+    padding-top: 20px;
+    @media (max-width: 562px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid $before;
+      @media (max-width: 562px) {
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+  }
+  &__nav-links {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $footer-bgc;
+    font-size: $link;
+    color: $footer-link;
+    @media (max-width: 562px) {
+      width: 50%;
+      margin-bottom: 15px;
+    }
+  }
+  &__link:hover {
+    color: $title-color;
+  }
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    background-color: $footer-bgc;
+    @media (max-width: 562px) {
+      width: 50%;
+    }
   }
 }

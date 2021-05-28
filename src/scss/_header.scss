@@ -4,13 +4,30 @@
   background-position: 100% 0%;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  padding: 3% 6% 200px 6%;
+  padding: 3% 8% 200px 8%;
+  background-color: transparent;
+  @media (max-width: 992px) {
+    background-size: auto 80%;
+    padding-bottom: 50px;
+  }
+  @media (max-width: 768px) {
+    background-size: auto 60%;
+  }
+  @media (max-width: 562px) {
+    background-image: none;
+    background-color: $bgc;
+    padding-bottom: 0;
+  }
 
   &__nav-panel {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
+    @media (max-width: 562px) {
+      display: none;
+    }
   }
   &__nav-list {
     display: flex;
@@ -19,19 +36,26 @@
     font-size: $link;
     color: $blue;
     font-weight: 400;
+    background-color: transparent;
+    @media (max-width: 768px) {
+      width: 30%;
+    }
   }
   &__logo {
     font-weight: 900;
     font-size: $logo-size;
     color: $logo;
-    border-bottom: 1px solid transparent;
+
     background-color: transparent;
     &:hover {
-      border-bottom: 1px solid $logo;
+      transform: translateY(5px);
     }
   }
-  &__nav-link:hover {
-    font-weight: 500;
+  &__nav-link {
+    background-color: transparent;
+    &:hover {
+      font-weight: 500;
+    }
   }
   &__content {
     background-color: transparent;
@@ -39,12 +63,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 45%;
+    @media (max-width: 562px) {
+      width: 90%;
+      align-items: center;
+    }
   }
   &__title {
     font-size: $title;
     margin-bottom: 20px;
     color: $title-color;
+    background-color: transparent;
   }
   &__text {
     background-color: transparent;
@@ -88,9 +117,122 @@
         color: $title-color;
       }
     }
+    @media (max-width: 562px) {
+      width: 150px;
+    }
   }
   &__btn-links {
     background-color: transparent;
     display: flex;
+  }
+}
+
+#menu__toggle {
+  opacity: 0;
+  background-color: transparent;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: $title-color;
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 50%;
+  padding: 80px 30px;
+  background-color: $bgc;
+  transition-duration: 0.25s;
+  text-align: center;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: $title-color;
+  font-size: 20px;
+  font-weight: 600;
+  transition-duration: 0.25s;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.menu__logo {
+  font-weight: 900;
+  font-size: $logo-size;
+  color: $logo;
+  margin-bottom: 20px;
+}
+
+.menu__nav-link {
+  color: $title-color;
+  font-size: $text;
+  margin-bottom: 20px;
+}
+
+.menu__btn-buy {
+  width: 160px;
+  height: 26px;
+  font-size: $header-btn;
+  border: 2px solid $title-color;
+  border-radius: 2px;
+  background-color: $title-color;
+  color: $white;
+  padding: 4px;
+}
+
+.hamburger-menu {
+  visibility: hidden;
+  background-color: transparent;
+  @media (max-width: 562px) {
+    visibility: visible;
   }
 }
